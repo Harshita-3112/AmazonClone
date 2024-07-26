@@ -2,6 +2,7 @@ import { Text } from 'react-native';
 import { COLOR_PALETTE } from '../Colors/Color';
 import React from 'react';
 import { scale } from 'react-native-size-matters';
+import { COLORS, FONTFAMILY } from '../theme/theme';
 
 export const Heading = ({ children, style }) => {
     return children ? (
@@ -9,8 +10,8 @@ export const Heading = ({ children, style }) => {
             style={[
                 {
                     fontSize: scale(16),
-                    fontFamily: 'Manrope-Medium',
-                    color: 'white'
+                    fontFamily: FONTFAMILY.AmazonEmber_bold,
+                    color: COLORS.primary
                 },
                 style ? { ...style } : {},
             ]}>
@@ -26,9 +27,11 @@ export const SubHeading = ({ children, style }) => {
     return (
         <Text style={[{
             fontSize: scale(14),
-            fontFamily: '',
-            color: 'white'
-        }, { ...style }]}
+            fontFamily: FONTFAMILY.Amazon_Medium,
+            color: COLORS.black
+        },
+        style ? { ...style } : {},
+        ]}
 
         >
             {children}
@@ -42,9 +45,11 @@ export const Body = ({ children, style }) => {
     return (
         <Text style={[{
             fontSize: scale(12),
-            fontFamily: '',
-            color: 'black'
-        }, { ...style }]}>
+            fontFamily: FONTFAMILY.AmazonEmber_regular,
+            color: COLORS.primary
+        },
+        style ? { ...style } : {},
+        ]}>
             {children}
         </Text>
     )
@@ -54,9 +59,9 @@ export const SubBody = ({ children, style }) => {
     return (
         <Text style={[{
             fontSize: scale(10),
-            fontFamily: '',
+            fontFamily: FONTFAMILY.AmazonEmber_light,
             color: 'black'
-        }, { ...style }]}>
+        }, style ? { ...style } : {},]}>
             {children}
         </Text>
     )

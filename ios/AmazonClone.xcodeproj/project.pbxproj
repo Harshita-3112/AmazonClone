@@ -14,6 +14,18 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-AmazonClone-AmazonCloneTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-AmazonClone-AmazonCloneTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8226878A6E444137919D174A /* Amazon-Ember-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3A658FCFD6E4BF7B82E054F /* Amazon-Ember-Medium.ttf */; };
+		EC2E76E9089F44E68AF0E95F /* Amazon-Ember-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2822710564C4D0A8E7D4D64 /* Amazon-Ember-MediumItalic.ttf */; };
+		FBBAF18E7B99442F83CAC5FF /* AmazonEmber_Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05932A955C94347805C609F /* AmazonEmber_Bd.ttf */; };
+		41FCCD61D7F2497B801BCB60 /* AmazonEmber_BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 850AB43E5E714206A836CB66 /* AmazonEmber_BdIt.ttf */; };
+		D193DD04790D43FA9470B140 /* AmazonEmber_He.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF106BA8D7074A70B6BB5EE6 /* AmazonEmber_He.ttf */; };
+		38EDB0D5F9504027BA7FF649 /* AmazonEmber_HeIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67EE4F5FADF4439EA6A5BEB4 /* AmazonEmber_HeIt.ttf */; };
+		A94A532EDBC94BCF8AC20DAC /* AmazonEmber_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23DAFCC269A14D969ACA7293 /* AmazonEmber_Lt.ttf */; };
+		C778159299734B6FAB59FA11 /* AmazonEmber_LtIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D65D93035454287A6B77565 /* AmazonEmber_LtIt.ttf */; };
+		6246851CBD204EDCB7D6D13C /* AmazonEmber_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D70E1B8014F4151A7AC1B35 /* AmazonEmber_Rg.ttf */; };
+		4A82E2164E274830AF551DD0 /* AmazonEmber_RgIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CFB77191EEE401FB9E06125 /* AmazonEmber_RgIt.ttf */; };
+		3C4491090F0E48B7BCFBBFE9 /* AmazonEmber_Th.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA42DC98BC664C9EA545C07E /* AmazonEmber_Th.ttf */; };
+		920B215944644903B49D5DDC /* AmazonEmber_ThIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD94BA0B214E4FCBBBC1CCA0 /* AmazonEmber_ThIt.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +48,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AmazonClone/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AmazonClone/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AmazonClone/main.m; sourceTree = "<group>"; };
-	    13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = AmazonClone/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = AmazonClone/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-AmazonClone-AmazonCloneTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AmazonClone-AmazonCloneTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-AmazonClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmazonClone.debug.xcconfig"; path = "Target Support Files/Pods-AmazonClone/Pods-AmazonClone.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-AmazonClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmazonClone.release.xcconfig"; path = "Target Support Files/Pods-AmazonClone/Pods-AmazonClone.release.xcconfig"; sourceTree = "<group>"; };
@@ -45,6 +57,18 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AmazonClone/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-AmazonClone-AmazonCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmazonClone-AmazonCloneTests.release.xcconfig"; path = "Target Support Files/Pods-AmazonClone-AmazonCloneTests/Pods-AmazonClone-AmazonCloneTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		A3A658FCFD6E4BF7B82E054F /* Amazon-Ember-Medium.ttf */ = {isa = PBXFileReference; name = "Amazon-Ember-Medium.ttf"; path = "../src/assets/fonts/Amazon-Ember-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A2822710564C4D0A8E7D4D64 /* Amazon-Ember-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Amazon-Ember-MediumItalic.ttf"; path = "../src/assets/fonts/Amazon-Ember-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B05932A955C94347805C609F /* AmazonEmber_Bd.ttf */ = {isa = PBXFileReference; name = "AmazonEmber_Bd.ttf"; path = "../src/assets/fonts/AmazonEmber_Bd.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		850AB43E5E714206A836CB66 /* AmazonEmber_BdIt.ttf */ = {isa = PBXFileReference; name = "AmazonEmber_BdIt.ttf"; path = "../src/assets/fonts/AmazonEmber_BdIt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CF106BA8D7074A70B6BB5EE6 /* AmazonEmber_He.ttf */ = {isa = PBXFileReference; name = "AmazonEmber_He.ttf"; path = "../src/assets/fonts/AmazonEmber_He.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		67EE4F5FADF4439EA6A5BEB4 /* AmazonEmber_HeIt.ttf */ = {isa = PBXFileReference; name = "AmazonEmber_HeIt.ttf"; path = "../src/assets/fonts/AmazonEmber_HeIt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		23DAFCC269A14D969ACA7293 /* AmazonEmber_Lt.ttf */ = {isa = PBXFileReference; name = "AmazonEmber_Lt.ttf"; path = "../src/assets/fonts/AmazonEmber_Lt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1D65D93035454287A6B77565 /* AmazonEmber_LtIt.ttf */ = {isa = PBXFileReference; name = "AmazonEmber_LtIt.ttf"; path = "../src/assets/fonts/AmazonEmber_LtIt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1D70E1B8014F4151A7AC1B35 /* AmazonEmber_Rg.ttf */ = {isa = PBXFileReference; name = "AmazonEmber_Rg.ttf"; path = "../src/assets/fonts/AmazonEmber_Rg.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0CFB77191EEE401FB9E06125 /* AmazonEmber_RgIt.ttf */ = {isa = PBXFileReference; name = "AmazonEmber_RgIt.ttf"; path = "../src/assets/fonts/AmazonEmber_RgIt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FA42DC98BC664C9EA545C07E /* AmazonEmber_Th.ttf */ = {isa = PBXFileReference; name = "AmazonEmber_Th.ttf"; path = "../src/assets/fonts/AmazonEmber_Th.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BD94BA0B214E4FCBBBC1CCA0 /* AmazonEmber_ThIt.ttf */ = {isa = PBXFileReference; name = "AmazonEmber_ThIt.ttf"; path = "../src/assets/fonts/AmazonEmber_ThIt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +148,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				8F44707E973142ABBA5239F6 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -149,6 +174,26 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		8F44707E973142ABBA5239F6 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				A3A658FCFD6E4BF7B82E054F /* Amazon-Ember-Medium.ttf */,
+				A2822710564C4D0A8E7D4D64 /* Amazon-Ember-MediumItalic.ttf */,
+				B05932A955C94347805C609F /* AmazonEmber_Bd.ttf */,
+				850AB43E5E714206A836CB66 /* AmazonEmber_BdIt.ttf */,
+				CF106BA8D7074A70B6BB5EE6 /* AmazonEmber_He.ttf */,
+				67EE4F5FADF4439EA6A5BEB4 /* AmazonEmber_HeIt.ttf */,
+				23DAFCC269A14D969ACA7293 /* AmazonEmber_Lt.ttf */,
+				1D65D93035454287A6B77565 /* AmazonEmber_LtIt.ttf */,
+				1D70E1B8014F4151A7AC1B35 /* AmazonEmber_Rg.ttf */,
+				0CFB77191EEE401FB9E06125 /* AmazonEmber_RgIt.ttf */,
+				FA42DC98BC664C9EA545C07E /* AmazonEmber_Th.ttf */,
+				BD94BA0B214E4FCBBBC1CCA0 /* AmazonEmber_ThIt.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +290,18 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				8226878A6E444137919D174A /* Amazon-Ember-Medium.ttf in Resources */,
+				EC2E76E9089F44E68AF0E95F /* Amazon-Ember-MediumItalic.ttf in Resources */,
+				FBBAF18E7B99442F83CAC5FF /* AmazonEmber_Bd.ttf in Resources */,
+				41FCCD61D7F2497B801BCB60 /* AmazonEmber_BdIt.ttf in Resources */,
+				D193DD04790D43FA9470B140 /* AmazonEmber_He.ttf in Resources */,
+				38EDB0D5F9504027BA7FF649 /* AmazonEmber_HeIt.ttf in Resources */,
+				A94A532EDBC94BCF8AC20DAC /* AmazonEmber_Lt.ttf in Resources */,
+				C778159299734B6FAB59FA11 /* AmazonEmber_LtIt.ttf in Resources */,
+				6246851CBD204EDCB7D6D13C /* AmazonEmber_Rg.ttf in Resources */,
+				4A82E2164E274830AF551DD0 /* AmazonEmber_RgIt.ttf in Resources */,
+				3C4491090F0E48B7BCFBBFE9 /* AmazonEmber_Th.ttf in Resources */,
+				920B215944644903B49D5DDC /* AmazonEmber_ThIt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

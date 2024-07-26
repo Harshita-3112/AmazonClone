@@ -1,3 +1,5 @@
+import { scale } from "react-native-size-matters";
+
 export const SPACING = {
     space_2: 2,
     space_4: 4,
@@ -15,9 +17,12 @@ export const SPACING = {
 };
 
 export const COLORS = {
+    primary: '#232f3e',
+    secondary: '#ffbf00',
     black: '#000',
-    orange: '#ff5524',
-    grey: '#333',
+    orange: '#b06c26',
+    secondary3: '#FC8A17',
+    secondary2: '#E3E3E3',
     darkGrey: '#0b0b0b',
     yellow: '#e1cd17',
     white: '#fff',
@@ -30,19 +35,24 @@ export const COLORS = {
 };
 
 export const FONTFAMILY = {
-    poppins_black: 'Poppins-Black',
-    poppins_bold: 'Poppins-Bold',
-    poppins_extrabold: 'Poppins-ExtraBold',
-    poppins_extralight: 'Poppins-ExtraLight',
-    poppins_light: 'Poppins-Light',
-    poppins_medium: 'Poppins-Medium',
-    poppins_regular: 'Poppins-Regular',
-    poppins_semibold: 'Poppins-SemiBold',
-    poppins_thin: 'Poppins-Thin',
+    AmazonEmber_bold: 'AmazonEmber_Bd',
+    AmazonEmber_light: 'AmazonEmber_Lt',
+    Amazon_Medium: 'Amazon-Ember-Medium',
+    AmazonEmber_regular: 'AmazonEmber_Rg',
+    AmazonEmber_thin: 'AmazonEmber_Th',
+    AmazonEmber_MediumItalic: 'Amazon-Ember-MediumItalic',
+    AmazonEmber_BdIt: 'AmazonEmber_BdIt',
+    AmazonEmber_He: 'AmazonEmber_He',
+    AmazonEmber_HeIt: 'AmazonEmber_HeIt',
+    AmazonEmber_LtIt: 'AmazonEmber_LtIt',
+    AmazonEmber_RgIt: 'AmazonEmber_RgIt',
+    AmazonEmber_ThIt: 'AmazonEmber_ThIt'
+
+
 };
 
 export const FONTSIZE = {
-    size_8: 8,
+    size_8: scale(8),
     size_10: 10,
     size_12: 12,
     size_14: 14,

@@ -26,14 +26,13 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-	  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
 		<key>NSAllowsArbitraryLoads</key>
 		<false/>
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -48,5 +47,20 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Amazon-Ember-Medium.ttf</string>
+		<string>Amazon-Ember-MediumItalic.ttf</string>
+		<string>AmazonEmber_Bd.ttf</string>
+		<string>AmazonEmber_BdIt.ttf</string>
+		<string>AmazonEmber_He.ttf</string>
+		<string>AmazonEmber_HeIt.ttf</string>
+		<string>AmazonEmber_Lt.ttf</string>
+		<string>AmazonEmber_LtIt.ttf</string>
+		<string>AmazonEmber_Rg.ttf</string>
+		<string>AmazonEmber_RgIt.ttf</string>
+		<string>AmazonEmber_Th.ttf</string>
+		<string>AmazonEmber_ThIt.ttf</string>
+	</array>
 </dict>
 </plist>
