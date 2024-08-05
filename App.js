@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StatusBar, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -12,13 +12,16 @@ import User from './src/screens/BottomTabNavigator/User/User';
 import More from './src/screens/BottomTabNavigator/More/More';
 import Cart from './src/screens/BottomTabNavigator/Cart/Cart';
 import Menu from './src/screens/BottomTabNavigator/Menu/Menu';
+import { COLORS } from './src/theme/theme';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <NavigationContainer >
+      <StatusBar barStyle={'dark-content'} />
+      <Stack.Navigator screenOptions={{ headerShown: false }} >
+
         {/* {/* <Stack.Screen name='Home' component={Home} /> */}
 
         {/* <Stack.Screen name='Onboarding' component={Onboarding} />

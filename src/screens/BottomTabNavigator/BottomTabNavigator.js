@@ -16,7 +16,7 @@ import { COLORS } from '../../theme/theme';
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator screenOptions={{ headerShown: false }}>
             <Tab.Screen
                 options={{
                     tabBarIcon: () => (
