@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  TouchableOpacity,
   View,
 } from 'react-native';
 import React, {useCallback, useEffect, useState} from 'react';
@@ -28,11 +29,15 @@ import {ModalTransition} from '@react-navigation/stack/lib/typescript/src/Transi
 import axios from 'axios';
 import ProductItem from '../../components/ProductItem';
 import DropDownPicker from 'react-native-dropdown-picker';
+import ProductInfo from '../ProductInfo/ProductInfo';
+import {useNavigation} from '@react-navigation/native';
 
 // import { SliderBox } from "react-native-image-slider-box";
 
 const Home = () => {
+  const navigation = useNavigation();
   const {height, width} = Dimensions.get('screen');
+
   const [products, setProducts] = useState([]);
   const [open, setOpen] = useState(false);
   const [category, setCategory] = useState('jewelery');
@@ -235,10 +240,17 @@ const Home = () => {
 
   const renderOffers = ({item, index}) => {
     return (
-      <View
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate('ProductInfo', {
+            item: item,
+          })
+        }
         style={{
-          alignItems: 'center',
-          marginRight: scale(20),
+          // alignItems: 'center',
+          // marginRight: scale(20),
+          backgroundColor: 'red',
+          width: '48%',
         }}>
         <Image style={styles.offerCardStyle} source={{uri: item.image}} />
 
@@ -254,12 +266,22 @@ const Home = () => {
           }}>
           <Text style={styles.offerText}>Upto {item?.offer} </Text>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   };
 
   const renderDeals = ({item, index}) => {
-    return <Image style={styles.dealsCardStyle} source={{uri: item.image}} />;
+    return (
+      <TouchableOpacity
+        style={{
+          alignItems: 'center',
+          marginRight: scale(20),
+          // backgroundColor: 'red',
+          width: '48%',
+        }}>
+        <Image style={styles.dealsCardStyle} source={{uri: item.image}} />
+      </TouchableOpacity>
+    );
   };
 
   const renderItem = () => {
@@ -534,13 +556,13 @@ const styles = StyleSheet.create({
   },
   dealsCardStyle: {
     height: scale(150),
-    width: '48%',
+    width: '100%',
     // margin: scale(5),
     marginTop: scale(10),
   },
   offerCardStyle: {
     height: scale(110),
-    width: '70%',
+    width: '100%',
     // marginHorizontal: scale(18),
   },
   offerText: {
