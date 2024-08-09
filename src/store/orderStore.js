@@ -1,9 +1,9 @@
 import {create} from 'zustand';
 
 export const useOrderStore = create(set => ({
-  order: [],
-  setOrder: data =>
+  cart: [],
+  setCart: data =>
     set(state => ({
-      order: [...state.order, data],
+      cart: [...state.cart, data],
     })),
 }));

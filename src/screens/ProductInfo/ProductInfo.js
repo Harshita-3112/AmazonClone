@@ -30,12 +30,19 @@ const {height, width} = Dimensions.get('screen');
 
 const ProductInfo = props => {
   const {item} = props.route.params;
-  const setOrder = useOrderStore(state => state.setOrder);
+  console.log('item here', item.id);
+  const setCart = useOrderStore(state => state.setCart);
+  const cart = useOrderStore(state => state.cart);
+  console.log('cart here', cart.length);
+
+  const isFound = cart.find(product => product.id === item.id);
+
+  console.log('found', isFound);
 
   const carouselItems = item.carouselImages;
 
   const handleAddToCartPress = item => {
-    setOrder(item);
+    setCart(item);
   };
   return (
     <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
@@ -192,9 +199,12 @@ const ProductInfo = props => {
       </Text>
 
       <TouchableOpacity
+        disabled={isFound ? true : false}
         onPress={() => handleAddToCartPress(item)}
         style={styles.cartStyle}>
-        <Text style={styles.cartText}>Add To Cart</Text>
+        <Text style={styles.cartText}>
+          {isFound ? 'Added To Cart' : 'Add To Cart'}
+        </Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.buyNowStyle}>

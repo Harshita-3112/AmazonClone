@@ -15,7 +15,7 @@ import {useOrderStore} from '../../store/orderStore';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
-  const order = useOrderStore(state => state.order);
+  const cart = useOrderStore(state => state.cart);
   //   console.log(order, 'orders');
 
   return (
@@ -50,7 +50,7 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         options={{
-          tabBarBadge: order.length,
+          tabBarBadge: cart.length,
 
           tabBarIcon: () => (
             <AntDesign name={'shoppingcart'} size={22} color={COLORS.black} />
