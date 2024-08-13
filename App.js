@@ -14,6 +14,7 @@ import Cart from './src/screens/BottomTabNavigator/Cart/Cart';
 import Menu from './src/screens/BottomTabNavigator/Menu/Menu';
 import {COLORS} from './src/theme/theme';
 import ProductInfo from './src/screens/ProductInfo/ProductInfo';
+import AddAddress from './src/screens/AddAddress/AddAddress';
 
 const Stack = createStackNavigator();
 
@@ -38,6 +39,7 @@ const App = () => {
         <Stack.Screen name="Cart" component={Cart} />
         <Stack.Screen name="Menu" component={Menu} />
         <Stack.Screen name="ProductInfo" component={ProductInfo} />
+        <Stack.Screen name="AddAddress" component={AddAddress} />
       </Stack.Navigator>
     </NavigationContainer>
   );

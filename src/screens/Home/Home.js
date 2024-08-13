@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {
   BORDERRADIUS,
   COLORS,
@@ -20,21 +20,26 @@ import {
 } from '../../theme/theme';
 import {scale} from 'react-native-size-matters';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Carousel from 'react-native-reanimated-carousel';
-import {Heading} from '../../common/fonts';
+import {Body, Heading} from '../../common/fonts';
 import {ModalTransition} from '@react-navigation/stack/lib/typescript/src/TransitionConfigs/TransitionPresets';
 import axios from 'axios';
 import ProductItem from '../../components/ProductItem';
 import DropDownPicker from 'react-native-dropdown-picker';
 import ProductInfo from '../ProductInfo/ProductInfo';
 import {useNavigation} from '@react-navigation/native';
+// import BottomSheet from '@gorhom/bottom-sheet/lib/typescript/components/bottomSheet';
+import BottomSheet, {BottomSheetView} from '@gorhom/bottom-sheet';
+import SearchBarHeader from '../../components/CTAButton/SearchBarHeader/SearchBarHeader';
 
 // import { SliderBox } from "react-native-image-slider-box";
 
 const Home = () => {
+  const bottomSheetRef = useRef();
   const navigation = useNavigation();
   const {height, width} = Dimensions.get('screen');
 
@@ -64,6 +69,18 @@ const Home = () => {
   const onGenderOpen = useCallback(() => {
     setCompanyOpen(false);
   }, []);
+
+  const handleSheetChanges = useCallback(index => {
+    // console.log('handleSheetChanges', index);
+  }, []);
+
+  const handleSheetOpen = () => {
+    bottomSheetRef.current?.expand();
+  };
+
+  const handleSheetClose = () => {
+    bottomSheetRef.current?.close();
+  };
 
   const list = [
     {
@@ -238,6 +255,30 @@ const Home = () => {
     },
   ];
 
+  const bottomSheetList = [
+    {
+      id: 0,
+      icon: <Entypo name="location-pin" size={20} color={COLORS.blue} />,
+      title: 'Enter an Indian pincode',
+    },
+    {
+      id: 1,
+      icon: (
+        <MaterialIcons
+          name="location-searching"
+          size={20}
+          color={COLORS.blue}
+        />
+      ),
+      title: 'Use my current location',
+    },
+    {
+      id: 2,
+      icon: <Ionicons name="globe-outline" size={20} color={COLORS.blue} />,
+      title: 'Deliver outside India',
+    },
+  ];
+
   const renderOffers = ({item, index}) => {
     return (
       <TouchableOpacity
@@ -248,8 +289,8 @@ const Home = () => {
         }
         style={{
           // alignItems: 'center',
-          // marginRight: scale(20),
-          backgroundColor: 'red',
+          // marginLeft: scale(20),
+          // backgroundColor: 'red',
           width: '48%',
         }}>
         <Image style={styles.offerCardStyle} source={{uri: item.image}} />
@@ -273,6 +314,7 @@ const Home = () => {
   const renderDeals = ({item, index}) => {
     return (
       <TouchableOpacity
+        onPress={() => navigation.navigate('ProductInfo', {item: item})}
         style={{
           alignItems: 'center',
           marginRight: scale(20),
@@ -311,55 +353,26 @@ const Home = () => {
   return (
     <View style={styles.container}>
       {/* SEARCHBAR & SCANNIG */}
-      <View style={styles.headerContainer}>
-        <View style={styles.searchBar}>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <AntDesign
-              name="search1"
-              size={22}
-              color={COLORS.black}
-              style={styles.searchIcon}
-            />
 
-            <TextInput
-              placeholder="Search Amazon.in"
-              style={{fontSize: 16, paddingLeft: 8}}
-            />
-          </View>
-          <View>
-            <AntDesign
-              name="scan1"
-              size={22}
-              color={COLORS.black}
-              style={{paddingRight: 6}}
-            />
-          </View>
-        </View>
-
-        <View style={styles.scanIcon}>
-          <MaterialCommunityIcons
-            name="magnify-scan"
-            size={22}
-            color={COLORS.black}
-          />
-        </View>
-      </View>
+      <SearchBarHeader />
 
       {/* SECOND HEADER */}
 
       <ScrollView>
-        <View style={styles.secondHeader}>
+        <TouchableOpacity
+          activeOpacity={0.3}
+          onPress={() => handleSheetOpen()}
+          style={styles.secondHeader}>
           <Ionicons name="location-outline" size={22} color={COLORS.black} />
-          <Pressable>
-            <Text style={styles.text}>Delivering to Bengaluru 560022</Text>
-          </Pressable>
+
+          <Text style={styles.text}>Delivering to Bengaluru 560022</Text>
           <MaterialIcons
             name="keyboard-arrow-down"
             size={24}
             color={COLORS.black}
             style={{left: 20}}
           />
-        </View>
+        </TouchableOpacity>
 
         <View>
           <FlatList
@@ -466,6 +479,71 @@ const Home = () => {
           />
         </View>
       </ScrollView>
+      <BottomSheet
+        index={-1}
+        enablePanDownToClose={true}
+        ref={bottomSheetRef}
+        onChange={handleSheetChanges}
+        snapPoints={['50%']}>
+        <BottomSheetView style={{flex: 1, marginHorizontal: scale(18)}}>
+          <Text
+            onPress={handleSheetClose}
+            style={{
+              fontSize: FONTSIZE.size_16,
+              fontFamily: FONTFAMILY.Amazon_Medium,
+              color: COLORS.black,
+            }}>
+            Choose your Location
+          </Text>
+          <Text style={{marginTop: scale(4)}}>
+            Select a delivery location to see product availability and delivery
+            options
+          </Text>
+          <View>
+            <ScrollView
+              horizontal
+              style={{
+                marginTop: scale(16),
+              }}
+              contentContainerStyle={{height: scale(120)}}
+              showsHorizontalScrollIndicator={false}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('AddAddress');
+                }}
+                style={{
+                  height: scale(120),
+                  width: scale(120),
+                  borderColor: '#D0D0D0',
+                  borderWidth: 1,
+
+                  padding: scale(10),
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    color: COLORS.blue,
+                    fontFamily: FONTFAMILY.AmazonEmber_regular,
+                  }}>
+                  Add an address or pick-up point
+                </Text>
+              </TouchableOpacity>
+            </ScrollView>
+          </View>
+          {bottomSheetList.map((item, index) => {
+            return (
+              <TouchableOpacity
+                key={index}
+                style={{flexDirection: 'row', gap: 6, marginTop: scale(10)}}>
+                {item.icon}
+                <Body style={{color: COLORS.blue}}>{item.title}</Body>
+              </TouchableOpacity>
+            );
+          })}
+        </BottomSheetView>
+      </BottomSheet>
     </View>
   );
 };
@@ -478,41 +556,7 @@ const styles = StyleSheet.create({
     // backgroundColor: 'red',
     backgroundColor: COLORS.white,
   },
-  searchBar: {
-    height: scale(40),
-    width: '90%',
-    borderWidth: 1.5,
-    borderColor: COLORS.grey,
-    borderRadius: BORDERRADIUS.radius_4,
-    marginTop: scale(20),
-    flex: 5,
-    backgroundColor: COLORS.white,
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    padding: 1,
-  },
-  headerContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: '#81D8D0',
-    paddingHorizontal: SPACING.space_18,
-    height: scale(70),
-  },
-  scanIcon: {
-    flex: 1,
-    // backgroundColor: 'cyan',
-    // alignSelf: 'center',
-    height: scale(40),
-    width: '10%',
-    marginTop: scale(20),
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  searchIcon: {
-    paddingLeft: scale(8),
-  },
+
   secondHeader: {
     height: scale(50),
     width: '100%',
@@ -561,9 +605,10 @@ const styles = StyleSheet.create({
     marginTop: scale(10),
   },
   offerCardStyle: {
-    height: scale(110),
-    width: '100%',
+    height: scale(150),
+    // width: '100%',
     // marginHorizontal: scale(18),
+    // marginRight: scale(10),
   },
   offerText: {
     color: COLORS.white,
